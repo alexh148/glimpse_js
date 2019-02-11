@@ -1,4 +1,4 @@
-var makeGlimpse = function() {
+function makeGlimpse() {
   function glimpse(compareOne) {
     return {
       isTheSameAs: function(compareTwo) {
