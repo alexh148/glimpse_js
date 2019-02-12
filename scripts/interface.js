@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var message = document.getElementById('message').value
     note.addNote(message)
     loadLastMessage();
+    clearBox();
   });
 
   function loadMessages() {
@@ -24,4 +25,9 @@ document.addEventListener('DOMContentLoaded', function () {
   text = (`<div id="links" class="rounded"> <a href="">${note.notesList.slice(-1)[0]}</a></div>`)
   document.getElementById('link-container').innerHTML += text;
   }
+
+  function clearBox() {
+    document.getElementById('message').value = "";
+  }
+
 });
