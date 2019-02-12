@@ -1,15 +1,15 @@
 const describe = function(description, nextStep) {
-  document.getElementById('tests').innerHTML += `<span style='color: brown; font-size: 25px;'><br>${description}<br>`;
+  printResults(`<span style='color: blue; font-size: 20px;'><br>${description}<br>`);
   nextStep()
 }
 
 const it = function(description, nextStep) {
-  document.getElementById('tests').innerHTML += `${description}<br>`
+  printResults(`<h5>${description}</h5>`);
   try {
     nextStep()
   }
   catch(error){
-    document.getElementById('tests').innerHTML += `<span style='color: #ce0000;'>Test failed with error</span><br><span>${error}<br>`
+    printResults(`<p id="test-fail">Test failed to run, due to error:</p><p id="test-fail">${error}<p>`);
   }
 }
 
@@ -17,17 +17,21 @@ function glimpse(compareOne) {
   return {
     isTheSameAs: function(compareTwo) {
       if (compareOne === compareTwo) {
-        document.getElementById('tests').innerHTML += `<span style='color: #00ba41;'>Test passed for ${compareOne} being the same as ${compareTwo}<br>`, 'color: #00ba41';
+        printResults(`<p id="test-pass"> - Passed</p>`);
       } else {
-        document.getElementById('tests').innerHTML += `<span style='color: #ce0000;'>Test failed for ${compareOne} being the same as ${compareTwo}<br>`;
+        printResults(`<p id="test-fail">Test failed for ${compareOne} being the same as ${compareTwo}</p>`);
       }
     },
     hasThisInIt: function(compareTwo) {
       if (compareOne.includes(compareTwo)) {
-        document.getElementById('tests').innerHTML += `<span style='color: #00ba41;'>Test passed for [${compareOne}] having ${compareTwo} inside it<br>`;
+        printResults(`<p id="test-pass"> - Passed</p>`);
       } else {
-        document.getElementById('tests').innerHTML += `<span style='color: #ce0000;'>Test failed for [${compareOne}] having ${compareTwo} inside it<br>`;
+        printResults(`<p id="test-fail"> - Failed: [${compareOne}] did not contain "${compareTwo}"</p>`);
       }
     }
   }
+}
+
+function printResults(text) {
+  document.getElementById('testResults').innerHTML += text;
 }
