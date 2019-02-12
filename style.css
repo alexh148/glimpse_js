@@ -5,4 +5,38 @@
 .container {
   width: 100%;
   height: 100vh;
+  text-align: center;
+  background-color: #99ccff;
+}
+
+#newNote {
+  margin: 5%;
+}
+
+#name {
+  background-color: #ffffb3;
+  height: 20%;
+  width: 70%;
+}
+
+#links {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 20ch;
+    text-align: center;
+}
+
+#link-container {
+  background-color: #ffffb3;
+  display: inline-block;
+  /* text-align: center; */
+
+}
+
+h1 {
+  border: none;
+  padding-top: 10px;
+  font-family: Impact;
+  font-size: 200px;
 }
