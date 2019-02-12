@@ -2,28 +2,42 @@
   margin: 0;
 }
 
-.container {
+.container, #link-container {
   width: 100%;
   height: 100vh;
   text-align: center;
-  background-image: url("golden-gate.jpg");
+  background-size: 100%;
+}
+
+.container {
+  background-image: url("./pictures/golden-gate.jpg");
+}
+
+#link-container {
+  background-image: url("./pictures/laptop.jpg");
+  display: inline-block;
 }
 
 #submit {
   border: none;
   font-size: 200%;
   margin: 5%;
-  border-radius: 25px;
 }
+
 #newNote {
   margin: 2.5%;
 }
 
-#name {
+#message {
   background-color: #ffffb3;
+  padding: 20px;
   height: 20%;
   width: 70%;
   font-size: 150%;
+}
+
+.rounded {
+  border-radius: 33px;
 }
 
 #links {
@@ -34,35 +48,27 @@
     text-align: center;
     padding: 10px;
     margin: 2.5%;
-    border-radius: 25px;
-    background-color: #ffffb3;
-      display: inline-block;
-
+    background-color: grey;
+    display: inline-block;
+    color: white;
+    transition: background-color 2s;
 }
 
-#link-container {
-  width: 100%;
-  height: 100vh;
-  text-align: center;
-  background-image: url("golden-gate.jpg");
-  display: inline-block;
-  font-size: 150%;
-  /* text-align: center; */
+#links:hover {
+  color: red;
+  background-color: #ffffb3;
+}
 
+h1, h2 {
+  border: none;
+  padding-top: 10px;
+  font-family: Impact;
 }
 
 h1 {
-  border: none;
-  padding-top: 10px;
-  font-family: Impact;
-  font-size: 200px;
+  font-size: 150px;
 }
 
 h2 {
-  border: none;
-  padding-top: 10px;
-  font-family: Impact;
-  font-size: 50px;
-
-
+  font-size: 100px;
 }
