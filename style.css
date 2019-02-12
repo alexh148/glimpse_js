@@ -2,7 +2,73 @@
   margin: 0;
 }
 
-.container {
+.container, #link-container {
   width: 100%;
   height: 100vh;
+  text-align: center;
+  background-size: 100%;
+}
+
+.container {
+  background-image: url("./pictures/golden-gate.jpg");
+}
+
+#link-container {
+  background-image: url("./pictures/laptop.jpg");
+  display: inline-block;
+}
+
+#submit {
+  border: none;
+  font-size: 200%;
+  margin: 5%;
+}
+
+#newNote {
+  margin: 2.5%;
+}
+
+#message {
+  background-color: #ffffb3;
+  padding: 20px;
+  height: 20%;
+  width: 70%;
+  font-size: 150%;
+}
+
+.rounded {
+  border-radius: 33px;
+}
+
+#links {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 20ch;
+    text-align: center;
+    padding: 10px;
+    margin: 2.5%;
+    background-color: grey;
+    display: inline-block;
+    color: white;
+    transition: background-color 2s;
+}
+
+#links:hover {
+  color: red;
+  background-color: #ffffb3;
+}
+
+h1, h2 {
+  border: none;
+  padding-top: 10px;
+  font-family: Impact;
+}
+
+h1 {
+  font-size: 150px;
+}
+
+h2 {
+  font-size: 100px;
 }
