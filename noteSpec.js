@@ -1,5 +1,3 @@
-
-
 var five = 5
 var six = 6
 var arr = [1,2,3,4,5]

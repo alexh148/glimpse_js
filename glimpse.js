@@ -23,8 +23,10 @@ function glimpse(compareOne) {
     },
     hasThisInIt: function(compareTwo) {
       if (compareOne.includes(compareTwo)) {
+        console.log(`%cTest passed for [${compareOne}] having ${compareTwo} inside it`, 'color: #00ba41');
         document.getElementById('tests').innerHTML += `<span style='color: #00ba41;'>Test passed for [${compareOne}] having ${compareTwo} inside it<br>`;
       } else {
+        console.warn(`%cTest failed for [${compareOne}] having ${compareTwo} inside it`, 'color: #ce0000');
         document.getElementById('tests').innerHTML += `<span style='color: #ce0000;'>Test failed for [${compareOne}] having ${compareTwo} inside it<br>`;
       }
     }
