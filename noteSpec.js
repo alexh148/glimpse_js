@@ -1,21 +1,16 @@
-var five = 5
-var six = 6
-var arr = [1,2,3,4,5]
+var note = new Note();
 
-describe("#equals", function() {
-  it("Five should equal 5", function() {
-    glimpse(five).isTheSameAs(5);
-  })
-  it("Five should equal 6", function() {
-    glimpse(five).isTheSameAs(6);
+describe("#notesList", function() {
+  it("Should have a list of notes", function() {
+    var note = new Nosdte();
+
+    glimpse(note.notesList).hasThisInIt("Hello World");
   })
 })
 
-describe("#includes", function() {
-  it("Array contains 5", function() {
-    glimpse(arr).hasThisInIt(5);
-  })
-  it("Array contains 6", function() {
-    glimpse(arr).hasThisInIt(7);
+describe("#addNote", function() {
+  it("Should have a list of notes", function() {
+    note.addNote("Another note")
+    glimpse(note.notesList).hasThisInIt("Another note");
   })
 })
