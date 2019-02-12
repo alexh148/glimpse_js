@@ -1,5 +1,4 @@
 
-var glimpse = new makeGlimpse()
 
 var five = 5
 var six = 6
@@ -9,7 +8,7 @@ describe("#equals", function() {
   it("Five should equal 5", function() {
     glimpse(five).isTheSameAs(5);
   })
-  it("Should return true", function() {
+  it("Five should equal 6", function() {
     glimpse(five).isTheSameAs(6);
   })
 })
@@ -19,6 +18,6 @@ describe("#includes", function() {
     glimpse(arr).hasThisInIt(5);
   })
   it("Array contains 6", function() {
-    glimpse(arr).hasThisInIt(6);
+    glimpse(arr).hasThisInIt(7);
   })
 })
