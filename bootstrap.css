@@ -65,8 +65,9 @@ body {
   margin: 0;
   font-family: "Neucha", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 100;
   line-height: 1.5;
+  letter-spacing: 10px;
   color: #212529;
   text-align: left;
   background-color: #fff;
@@ -6165,7 +6166,7 @@ a.close.disabled {
   margin: 0;
   font-family: "Neucha", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 100;
   line-height: 1.5;
   text-align: left;
   text-align: start;
