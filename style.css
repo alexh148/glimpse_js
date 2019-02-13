@@ -30,7 +30,7 @@
   margin: 2.5%;
 }
 
-#message {
+#message, #hidden {
   background-color: #ffffb3;
   padding: 20px;
   height: 20%;
