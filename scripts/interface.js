@@ -14,13 +14,18 @@ submit.addEventListener('click', function(event) {
  });
 
 function viewMessage(index) {
+  showSection('view-full');
+  hideSection('add-note');
+  hideSection('view-all');
   var noteBody = note.notesList[index];// whatever id was clicked on, the value
   var text = `<p id="visible"> ${noteBody}</p>`;
-  document.getElementById('view-all').innerHTML = text;
+  document.getElementById('note-body').innerHTML = text;
 }
 
 function goBack() {
-  loadMessages();
+  hideSection('view-full');
+  showSection('add-note');
+  showSection('view-all');
 }
 
 function loadMessages() {
@@ -40,4 +45,14 @@ document.getElementById('view-all').innerHTML += text;
 
 function clearBox() {
   document.getElementById('message').value = "";
+}
+
+function hideSection(id) {
+  var x = document.getElementById(id)
+  x.style.display = 'none';
+}
+
+function showSection(id) {
+  var x = document.getElementById(id)
+  x.style.display = 'block';
 }
