@@ -16,9 +16,7 @@ submit.addEventListener('click', function(event) {
 function viewMessage(index) {
   var noteBody = note.notesList[index];// whatever id was clicked on, the value
   var text = `<p id="visible"> ${noteBody}</p>`;
-  document.getElementById('link-container').innerHTML = text;
-  var goBackButton = `<input type="button" id="" class="rounded" value="Go Back!" onclick="goBack()">`;
-  document.getElementById('link-container').innerHTML += goBackButton;
+  document.getElementById('view-all').innerHTML = text;
 }
 
 function goBack() {
@@ -26,18 +24,18 @@ function goBack() {
 }
 
 function loadMessages() {
-  document.getElementById('link-container').innerHTML = "";
+  document.getElementById('view-all').innerHTML = "";
   var allMessages = note.notesList
   for (i = 0; i < allMessages.length; i++ ){
     text = (`<input type="button" id="${i}" class="rounded" value="${allMessages[i]}" onclick="viewMessage(${i})">`)
-    document.getElementById('link-container').innerHTML += text;
+    document.getElementById('view-all').innerHTML += text;
   }
 }
 
 function loadLastMessage() {
   console.log(note)
 text = (`<input type="button" id="${i = note.notesList.length - 1}" class="rounded" value="${note.notesList.slice(-1)[0]}" onclick="viewMessage(${i})">`)
-document.getElementById('link-container').innerHTML += text;
+document.getElementById('view-all').innerHTML += text;
 }
 
 function clearBox() {

@@ -3,21 +3,32 @@
   <link rel="stylesheet" href="style.css">
   </head>
 <body>
-
-  <div class="container">
+  <header>
     <h1>NOTES</h1>
-  <form id="newNote">
-    <textarea id="message" class="rounded" rows="8" cols="80"></textarea>
-    <br>
-    <input id="submit" class="rounded" type="submit" value="Add Note">
-  </form>
-  </div>
+  </header>
 
-    <div id="link-container">
-      <h2>LINKS</h2>
-    
+  <section id='add-message'>
+    <!-- <div class="container"> -->
+    <form id="newNote">
+      <textarea id="message" class="rounded" rows="8" cols="80"></textarea>
+      <br>
+      <input id="submit" class="rounded" type="submit" value="Add Note">
+    </form>
+  </section>
+
+  <section id='view-all'>
+    <h2>LINKS</h2>
+    <!-- <div id="link-container"> -->
+  </section>
+
+  <section id='view-full'>
+    <!-- style='display: none' -->
+    <!-- Article is populated with note's body by the intreface script -->
+    <article id='note-body'></article>
+    <button id="back-button" class="rounded" onclick="goBack()">Go back</button>
+  </section>
+
   </body>
 
   <script src = "note.js"></script>
-  <script src = "glimpse.js"></script>
   <script src = "./scripts/interface.js"></script>
