@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="bootstrap.css">
   </head>
 <body>
   <header>
@@ -10,9 +11,9 @@
   <section id='add-note'>
     <!-- <div class="container"> -->
     <form id="newNote">
-      <textarea id="message" class="rounded" rows="8" cols="80"></textarea>
+      <textarea id="message" rows="8" cols="80"></textarea>
       <br>
-      <input id="submit" class="rounded" type="submit" value="Add Note">
+      <input id="submit" class="btn btn-outline-primary" type="submit" value="Add Note">
     </form>
   </section>
 
@@ -21,11 +22,11 @@
     <!-- <div id="link-container"> -->
   </section>
 
-  <section id='view-full'>
+  <section id='view-full' style="display: none">
     <!-- style='display: none' -->
     <!-- Article is populated with note's body by the intreface script -->
     <article id='note-body'></article>
-    <button id="back-button" class="rounded" onclick="goBack()">Go back</button>
+    <button id="back-button" class="btn btn-outline-primary"  onclick="goBack()">Go back</button>
   </section>
 
   </body>

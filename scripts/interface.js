@@ -29,10 +29,10 @@ function goBack() {
 }
 
 function loadMessages() {
-  document.getElementById('view-all').innerHTML = "";
+  // document.getElementById('view-all').innerHTML = "";
   var allMessages = note.notesList
   for (i = 0; i < allMessages.length; i++ ){
-    text = (`<input type="button" id="${i}" class="rounded" value="${allMessages[i]}" onclick="viewMessage(${i})">`)
+    text = (`<input type="button" id="${i}" class="button" value="${allMessages[i]}" onclick="viewMessage(${i})">`)
     document.getElementById('view-all').innerHTML += text;
   }
 }
