@@ -39,7 +39,7 @@ function loadMessages() {
 
 function loadLastMessage() {
   console.log(note)
-text = (`<input type="button" id="${i = note.notesList.length - 1}" class="rounded" value="${note.notesList.slice(-1)[0]}" onclick="viewMessage(${i})">`)
+text = (`<input type="button" id="${i = note.notesList.length - 1}" class="button" value="${note.notesList.slice(-1)[0]}" onclick="viewMessage(${i})">`)
 document.getElementById('view-all').innerHTML += text;
 }
 

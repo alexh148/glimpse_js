@@ -9,15 +9,24 @@ body {
   color: white;
 }
 
+#add-note {
+  float: left;
+}
+
 #add-note, #view-all, #view-full {
-  width: 100%;
+  width: 50%;
   height: auto;
   text-align: center;
-  padding: 3%
+  padding: 3%;
 }
 
 #view-all {
-  display: block;
+  float: right;
+}
+
+#view-full {
+  width: 100%;
+  float: middle;
 }
 
 .button {
@@ -29,7 +38,6 @@ body {
 }
 
 #submit, #back-button {
-  /* border: none; */
   font-size: 200%;
   margin: 5%;
 }
