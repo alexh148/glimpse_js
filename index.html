@@ -1,35 +1,38 @@
 <!DOCTYPE html>
-<head>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="bootstrap.css">
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Noots</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.css">
   </head>
-<body>
-  <header>
-    <h1>NOTES</h1>
-  </header>
+  <body>
+    <header>
+      <h1>NOTES</h1>
+    </header>
 
-  <section id='add-note'>
-    <!-- <div class="container"> -->
-    <form id="newNote">
-      <textarea id="message" rows="8" cols="80"></textarea>
-      <br>
-      <input id="submit" class="btn btn-outline-primary" type="submit" value="Add Note">
-    </form>
-  </section>
+    <section id='add-note'>
+      <form id="newNote">
+        <textarea id="message" rows="8" cols="80"></textarea>
+        <br>
+        <input id="submit" class="btn btn-outline-primary" type="submit" value="Add Note">
+      </form>
+    </section>
 
-  <section id='view-all'>
-    <h2>LINKS</h2>
-    <!-- <div id="link-container"> -->
-  </section>
+    <section id='view-all'>
+      <h2>LINKS</h2>
+    </section>
 
-  <section id='view-full' style="display: none">
-    <!-- style='display: none' -->
-    <!-- Article is populated with note's body by the intreface script -->
-    <article id='note-body'></article>
-    <button id="back-button" class="btn btn-outline-primary"  onclick="goBack()">Go back</button>
-  </section>
-
+    <section id='view-full' style="display: none">
+      <article id='note-body'>
+        <!-- Note links go here -->
+      </article>
+      <button id="back-button" class="btn btn-outline-primary"  onclick="goBack()">Go back</button>
+    </section>
   </body>
 
-  <script src = "note.js"></script>
-  <script src = "./scripts/interface.js"></script>
+  <footer>
+    <script src="note.js"></script>
+    <script src="./scripts/interface.js"></script>
+  </footer>
+</html>
