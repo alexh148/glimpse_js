@@ -12,3 +12,9 @@ describe("#addNote", function() {
     glimpse(note.notesList).hasThisInIt("Another note");
   })
 })
+
+describe("#getNote", function() {
+  it("Should retrive a note from the notes list based on an index passed as an argument", function() {
+    glimpse(note.getNote(1)).isTheSameAs("Another note");
+  })
+})
