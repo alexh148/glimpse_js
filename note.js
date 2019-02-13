@@ -1,5 +1,5 @@
 function Note () {
-  this.notesList = ["Hello World"]
+  this.notesList = ["...............Created By...............Alex, Haba, John, Katie, & Paul"]
 };
 
 Note.prototype.addNote = function (newNote) {
